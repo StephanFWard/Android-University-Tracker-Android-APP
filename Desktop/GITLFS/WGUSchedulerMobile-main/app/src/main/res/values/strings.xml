@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">University Tracker</string>
+    <string-array name="term_array">
+        <item>In-Progress</item>
+        <item>Completed</item>
+        <item>Not Enrolled</item>
+    </string-array>
+    <string-array name="course_array">
+        <item>In-Progress</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+        <item>Plan to take</item>
+    </string-array>
+    <string-array name="assessment_status_array">
+        <item>In-Progress</item>
+        <item>Passed</item>
+        <item>Failed</item>
+    </string-array>
+    <string-array name="assessment_type_array">
+        <item>Performance</item>
+        <item>Objective</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_term_efab">Add Term</string>
+    <string name="degree_plan_fab">View Terms</string>
+    <string name="save_term_efab">Save Term</string>
+    <string name="add_course_efab">Add Course</string>
+    <string name="add_teacher_efab">Add Teacher</string>
+    <string name="add_assessment_efab">Add Assessment</string>
+    <string name="save_efab">Save</string>
+    <string name="edit_efab">Edit</string>
+    <string name="update_efab">Update</string>
+    <string name="send_efab">Send</string>
+    <string name="teacher_s_name">Teacher Name:</string>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activity.AddTeacher">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="37dp"
+        android:text="@string/teacher_s_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addTeacherName"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.50"
+        android:autofillHints="" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addTeacherFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="37dp"
+        android:contentDescription="@string/add_teacher_efab"
+        android:text="@string/add_teacher_efab"
+        app:backgroundTint="#00BCD4"
+        app:icon="@drawable/ic_menu_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="Phone Number:"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="Email Address:"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <EditText
+        android:id="@+id/addTeacherPhone"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/addTeacherName"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+    <EditText
+        android:id="@+id/addTeacherEmailAddress"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="@+id/addTeacherPhone"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.wgu.Stephan_Ward_C196">
+    <!-- Sets the user's permission -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <!-- Applies the Main page application theme -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_foreground1"
+        android:label="University Course Tracker"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.c196AppTheme">
+        <receiver
+            android:name="edu.wgu.Stephan_Ward_C196.Utilities.Notifications"
+            android:enabled="true"
+            android:exported="true" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.EditTeacher"
+            android:label="Edit Teacher"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.TeacherDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.EditAssessment"
+            android:label="Edit Assessment"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.AssessmentDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.EditCourse"
+            android:label="Edit Course"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.CourseDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.EditTerm"
+            android:label="Edit Term"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.TermDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.TeacherDetails"
+            android:label="Teacher Details"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.CourseDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.AssessmentDetails"
+            android:label="Assessment Details"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.CourseDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.AddTeacher"
+            android:label="Add Teacher"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.CourseDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.AddAssessment"
+            android:label="Add Assessment"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.CourseDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.CourseDetails"
+            android:label="Course Details"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.TermDetails" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.AddCourse"
+            android:label="Add Course"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.TermDetails"/>
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.TermDetails"
+            android:label="Term Details"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.TermList" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.AddTerm"
+            android:label="Add Term"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.TermList" />
+        <activity
+            android:name="edu.wgu.Stephan_Ward_C196.Activity.TermList"
+            android:label="Term List"
+            android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.HomePage" />
+        <activity android:name="edu.wgu.Stephan_Ward_C196.Activity.HomePage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
