@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.wgu.Stephan_Ward_C196">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Sets the user's permission -->
     <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <!-- Include "neverForLocation" only if you can strongly assert that
+         your app never derives physical location from Wi-Fi APIs. -->
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES"
+        android:usesPermissionFlags="neverForLocation" />
+
+    <!-- Not needed if you can strongly assert that your app never derives
+         physical location from Wi-Fi APIs and doesn't need location
+         access for any other purpose. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- Applies the Main page application theme -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_foreground1"
@@ -69,7 +83,8 @@
             android:name="edu.wgu.Stephan_Ward_C196.Activity.TermList"
             android:label="Term List"
             android:parentActivityName="edu.wgu.Stephan_Ward_C196.Activity.HomePage" />
-        <activity android:name="edu.wgu.Stephan_Ward_C196.Activity.HomePage">
+        <activity android:name="edu.wgu.Stephan_Ward_C196.Activity.HomePage"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
